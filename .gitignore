@@ -21,3 +21,6 @@ wp-content/themes/*
 !wp-content/themes/bhs/
 
 node_modules
+*.min.*
+wp-content/themes/bhs/assets/css/
+wp-content/themes/bhs/assets/js/vendors.js
