@@ -66,9 +66,9 @@ gulp.task('browser-sync', function() {
     browserSync.init(files, {
 
         // Read here http://www.browsersync.io/docs/options/
-        proxy: 'http://localhost/politics',
+        proxy: 'http://localhost:8888/wp-quiz',
 
-        // port: 8080,
+        //port: 8888,
 
         // Tunnel the Browsersync server through a random Public URL
         // tunnel: true,
@@ -205,7 +205,7 @@ gulp.task( 'customJS', function() {
   */
 
  gulp.task( 'default', [ 'styles', 'venderCss', 'vendorsJs', 'customJS', 'browser-sync' ], function () {
-    gulp.watch( './assets/css/**/*.scss', [ 'styles' ] );
+    gulp.watch( './assets/scss/**/*.scss', [ 'styles' ] );
     gulp.watch( './assets/js/vendors/*.js', [ 'vendorsJs' ] );
     gulp.watch( './assets/js/custom/*.js', [ 'customJS', browserSync.reload ] );
  });
